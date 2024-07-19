@@ -1,0 +1,31 @@
+@import 'helper/normalize';
+@import 'global/header';
+@import 'global/home';
+@import 'config/variables';
+@import 'helper/global';
+@import 'global/component';
+@import 'global/footer'; 
+@import 'global/login';
+@import 'global/contact';
+@import 'global/blog-detail';
+@import 'global/x-detail';
+@import 'global/sales-points';
+@import 'global/shopping';
+@import 'global/sub-page';
+@import 'global/product-detail';
+@import 'config/mixin';
+
+// font
+@import url(https://db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=Cera+PRO+Regular);
+
+// @font-face {
+//     font-family: "Cera PRO Regular";
+//     src: url("https://db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.eot");
+//     src: url("https://db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.eot?#iefix")format("embedded-opentype"),
+//     url("https://db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.woff2")format("woff2"),
+//     url("https://db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.woff")format("woff"),
+//     url("https://db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.ttf")format("truetype"),
+//     url("https://db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.svg#Cera PRO Regular")format("svg");
+// }
+
+ 

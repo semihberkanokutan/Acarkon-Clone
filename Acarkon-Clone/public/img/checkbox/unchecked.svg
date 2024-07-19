@@ -1,0 +1,23 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="20" height="20" fill="#353535"/>
+<g id="Acarkon Store - Giri&#197;&#159; Yap - Kay&#196;&#177;t Ol" clip-path="url(#clip0_0_1)">
+<rect width="1440" height="2201" transform="translate(-841 -813)" fill="white"/>
+<g id="Group 141">
+<rect id="Rectangle 45" x="-841" y="-31" width="1440" height="1206" fill="url(#paint0_linear_0_1)"/>
+</g>
+<g id="Group 200">
+<g id="Group 194">
+<rect id="Rectangle 57" x="1" y="1" width="18" height="18" rx="5" fill="#FFFCF9" stroke="#4F4235" stroke-width="2"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1" x1="-121" y1="1504.05" x2="-121" y2="157.312" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFEADD"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<clipPath id="clip0_0_1">
+<rect width="1440" height="2201" fill="white" transform="translate(-841 -813)"/>
+</clipPath>
+</defs>
+</svg>

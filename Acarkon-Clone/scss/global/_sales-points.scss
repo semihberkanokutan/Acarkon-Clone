@@ -1,0 +1,364 @@
+.Sales-points {
+    position: relative;
+    bottom: 162px;
+
+    &-heading {
+        color: #4F4235;
+        text-align: center;
+        font-size: 21.65px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: normal;
+    }
+
+    &-sub-heading {
+        color: #68594B;
+        text-align: center;
+        font-size: 15.598px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: 0%; /* 0px */
+        margin-top: 24px;
+    }
+
+    .Find-dealer {
+        background: #FFEBDF;
+        height: 120px;
+        padding: 32px 65px 32px 69px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 274px;
+        justify-content: space-between;
+        gap: 30px;
+        margin-top: 39px;
+
+
+        label {
+            background-color: white;
+            position: relative;
+            // width: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+            padding-left: 35px;
+            padding-right: 26px;
+
+            color: #4F4235;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: normal;
+
+            &:hover {
+                background-color: #dedede;
+            }
+
+            select {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+
+                
+            }
+        }
+
+        &-city {
+
+        }
+
+        &-search {
+            // width: 100%;
+            padding-left: 35px;
+            flex-grow: 1;
+            border: none;
+
+
+            &::placeholder {
+                color: #4f4236;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+            }
+
+           
+        }
+
+        &-button {
+            background: #4F4235;
+            border: none;
+            color: #FFF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 228.7%; /* 45.74px */
+            width: 274px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 19px;
+            transition: opacity .3s;
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+
+        #cities {
+
+            option {
+                color: $color-coffee;
+                background: $color-white;
+            }
+        }
+
+    }
+}
+
+
+
+// Sales Points Cities Page
+.Sales-points-cities {
+    position: relative;
+    bottom: 300px;
+
+    #svg-turkey-map path.active {
+        fill: #FFEBDF;
+    }
+
+
+    .fa-location-dot {
+        display: none;
+        opacity: 0;
+        font-size: 30px;
+        //position: sticky;
+        position: absolute;
+        top: 0;
+    }
+    &-cities-heading {
+        color: #4F4235;
+        text-align: center;
+        font-size: 27.49px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: normal;
+        margin-bottom: 0;
+    }
+
+    &-cities-sub-heading {
+        color: #4F4235;
+        text-align: center;
+        font-size: 20.734px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+    }
+
+    .number-of-craftsmen {
+        color: #4F4235;
+        font-size: 23.622px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+
+        span {
+            font-weight: $font-weight-medium;
+        }
+    }
+
+    .map {
+        width: 1103px;
+        height: 474px;
+        border: 1px solid #000;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.city-choice {
+    .map-container .city {
+        fill: #4F4235;
+        width: 150%;
+    
+        
+    }
+    
+    .map-wrapper {
+        // max-width: 960px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+    
+    
+    .city {
+        fill: #CCCCCC;
+        fill-opacity: 1;
+        stroke:white;
+        stroke-opacity: 1;
+        stroke-width:0.5;
+        transition: all .3s ease-out;
+        cursor: pointer;
+    
+    
+        &:hover {
+            fill: #a9a9a9;
+        }
+    }
+    
+    .show-city-name {
+        background-color: #FFEADD;
+        border-radius: 10px;
+        color: #7A6958;
+        //position: absolute;
+        position: fixed;
+        padding: 15px 25px;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 16px;
+    
+        &--active {
+            opacity: 1;
+            visibility: visible
+        }
+    }
+
+    
+}
+
+
+@mixin cardCraftsman($fontSize) {
+    color: #4F4235;
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 161.7%;
+}
+
+
+.Card-craftsman {
+    border: 0.915px solid #DFDFDF;
+    background: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 29px 45px 37px;
+    width: 100%;
+    height: 254.488px;
+
+
+    > svg {
+        position: relative;
+        right: 8px;
+    }
+ 
+    &-name {
+        @include cardCraftsman(20.876px);
+    }
+
+    &-rating {
+        @include cardCraftsman(12.304px);
+        margin-left: 6px;
+    }
+
+    &-completed-work {
+        @include cardCraftsman(14.694px);
+        font-weight: $font-weight-light !important;
+        margin-bottom: 19.18px;
+        // position: relative;
+        // bottom: 19.18px;
+
+
+        span {
+            font-weight: $font-weight-medium;
+        }
+    }
+
+    &-send-request-button {
+        background: #4F4235;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // padding: 12.762px 5.801px 12.762px 12.762px;
+        padding-right: 5.801px;
+        padding-left: 12.762px;
+        gap: 10px;
+        height: 32.484px;
+
+
+        color: #FFF;
+        font-size: 11.601px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: 228.7%; /* 26.533px */
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+}
+
+.Card-dealer {
+    border: 0.996px solid #DFDFDF;
+    background: #FFF;
+    padding: 30px 49px 27px 44px;
+    height: 316px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    &-address {
+        // display: flex;
+        // flex-direction: column;
+        color: #4F4235;
+        font-size: 15.598px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        // // line-height: 0%;
+
+        span {
+            font-weight: $font-weight-medium;
+        }
+    }
+
+    &-contact {
+        width: 39px;
+        height: 39px;
+        background: #4F4235;;
+        border-radius: 35px;
+        display: grid;
+        place-items: center;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &-sub-icon {
+        color: #4F4235;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: 161.7%; /* 19.404px */
+        margin-top: 6px;
+    }
+
+    // .direction {
+    //     // background: red;
+    //     // border-radius: 50%;
+
+    //     border-radius: 35px;
+    //     background: #4F4235;
+    //     width: 39px;
+    //     height: 39px;
+    //     padding: 6px;
+    // }
+}

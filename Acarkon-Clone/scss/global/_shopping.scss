@@ -1,0 +1,632 @@
+.Shopping {
+    position: relative;
+    bottom: 190px;
+
+    #content-info {
+
+    }
+
+    //headings
+    @mixin shoppingHeading() {
+        color: #4F4235;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: normal;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    //Alışveriş basamakları
+    &-steps {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 45px;
+
+        &-step {
+            color: #4F4235;
+            font-size: 19.545px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            line-height: normal;
+        }
+    }
+
+    //text icerigi
+    @mixin shoppingBasketContent($fontSize) {
+        color: #4F4235;
+        text-align: right;
+        font-size: $fontSize;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 235.7%; /* 37.712px */
+    }
+
+    //Sepet Özet
+    &-basket {
+        border: 1px solid #DFDFDF;
+        background: $color-white;
+        height: 499px;
+        padding: 50px 41px 29px 44px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        &-heading {
+            @include shoppingHeading();
+        }
+
+        &-product-quantity {
+            @include shoppingHeading();
+            font-weight: $font-weight-light;
+        }
+
+        table {
+            width: 100%;
+
+            &:nth-of-type(1) {
+                position: relative;
+                bottom: 16px;
+            }
+        }
+
+        tr {
+            display: flex;
+            justify-content: space-between;
+
+            td {
+                &:first-child {
+                    @include shoppingBasketContent(14px);
+                }
+
+                &:last-child {
+                    @include shoppingBasketContent(16px);
+                }
+            }
+        }
+
+        &-product {
+            display: flex;
+            gap: 12px;
+
+            &-name {
+                color: #4F4235;
+                font-size: 13.812px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: 120.2%; /* 16.603px */
+                //white-space: pre-line;
+            }
+
+            .price {
+                color: #4F4235;
+                font-size: 22.348px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .fraction {
+                color: #4F4235;
+                font-size: 11.174px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                position: relative;
+                top: 2px;
+
+                span {
+                    font-weight: $font-weight-light;
+                }
+            }
+
+            .currency {
+                color: #4F4235;
+                font-size: 7.981px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                position: relative;
+                bottom: 2px;
+                left: 3px;
+            }
+        }
+
+        //Ödeme Seçenekleri basamağındaki
+        //Adres & Kargo Bilgileri kısmı
+        &-address-info {
+            padding-right: 44px;
+            padding-left: 44px;
+            h3 {
+                color: #4F4235;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+            }
+            span {
+                color: #4F4235;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            p {
+                color: #63513F;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: 138.7%; /* 19.418px */
+            }
+        }
+    }
+
+    //Kaydet ve Devam Et
+    //Siparişi Tamamla
+    //Üye Ol
+    //butonları
+    &-button {
+        width: 100%;
+        height: 66px;
+        background: #68594B;
+        border: none;
+
+
+        span {
+            color: #FFF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 228.7%; /* 45.74px */
+        }
+
+        svg {
+            margin-bottom: 3px;
+            margin-left: 19px;
+        }
+
+        &:hover {
+            opacity: .9;
+        }
+
+
+    }
+
+
+    //Adres ve Kargo Bilgileri
+    .Adress-shipping {
+        height: 499px;
+        display: grid;
+        grid-template-columns: 647fr 321fr;
+        border: 1px solid #DFDFDF;
+        background: #FFF;
+        position: relative;
+
+        //&-divider {
+        //    position: absolute;
+        //    width: 100%;
+        //    left: 0;
+        //    opacity: 1;
+        //    border: none;
+        //    background: rgba(122, 105, 88, 0.20);
+        //    height: 1px;
+        //    margin: 0;
+        //    top: 118px;
+        //}
+
+        &_delivery-address {
+            //padding: 48px;
+            display: flex;
+            flex-direction: column;
+
+            &-heading {
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+            }
+
+            .same-address {
+                color: #4F4235;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+            }
+
+            .select-delivery-adress {
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+            }
+
+            .chosen-address {
+                border: 1px solid #DFDFDF;
+                padding: 22px;
+                flex-grow: 1;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &-heading {
+                    color: #4F4235;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: $font-weight-medium;
+                    line-height: normal;
+                    margin-left: 11px;
+                }
+
+                &-text {
+                    color: #63513F;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: $font-weight-light;
+                    line-height: 138.7%; /* 19.418px */
+                }
+
+                .delete-address, .edit-address {
+                    color: #63513F;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: $font-weight-light;
+                    line-height: 138.7%; /* 19.418px */
+                    text-decoration-line: underline !important;
+                    cursor: pointer;
+                }
+            }
+
+            .add-new-address {
+                border: 1px solid #DFDFDF;
+                background: #FFF;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+
+                cursor: pointer;
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+            }
+        }
+
+        &_shipping-company {
+            border-left: 1px solid rgba(122, 105, 88, 0.20);
+
+            &-heading {
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium        ;
+                line-height: normal;
+            }
+
+            p {
+                color: #4F4235;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+                white-space: pre-line;
+            }
+
+            .shipping-cost {
+                color: #4F4235;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+            }
+        }
+    }
+
+    //Ödeme Seçenekleri
+    .Payment-options {
+        display: grid;
+        grid-template-columns: 647fr 321fr;
+        height: 499px;
+
+        &_options {
+            height: 118px;
+            display: flex;
+
+
+            .payment-option {
+                color: rgba(79, 66, 53, 0.60);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+                height: 100%;
+                display: inline-flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &.active {
+                    color: #4F4235;
+                    border: 1px solid #DFDFDF;
+                    background: $color-white;
+                    border-bottom-color: $color-white;
+                    position: relative;
+                    top: 1px;
+
+                    + span {
+                        background: rgba(255, 255, 255, 0.90);
+
+                        + span {
+                            background: rgba(255, 255, 255, 0.50);
+
+                            + span {
+                                background: rgba(255, 255, 255, 0.20);
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: linear-gradient(#FFEADD 0%, #FFF 100%);
+                }
+            }
+        }
+
+        &_payment-infos {
+            border: 1px solid #DFDFDF;
+            height: 381px;
+            border-right: none;
+            padding: 46px 164px 53px 42px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-heading {
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+
+                + * {
+                    color: #4F4235;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: $font-weight-light;
+                    line-height: normal;
+                }
+            }
+
+            label {
+                color: #4F4235;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
+
+            .input {
+                height: 56px;
+                border: 1px solid #7A6958;
+                background: #FFF;
+                padding-left: 18px;
+                padding-right: 18px;
+
+                -webkit-appearance: none;
+
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+
+                &:focus-within {
+                    background-color: #DFDFDF;
+                    border: 1px solid #7A6958;
+                }
+
+                &:focus {
+                    border: 1px solid #7A6958;
+                    outline: none;
+                }
+
+                &:active {
+                    border: 1px solid #7A6958;
+                    outline: none;
+                }
+
+                + a {
+                    color: #4F4235;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: $font-weight-light;
+                    line-height: normal;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &_installment-options {
+            border: 1px solid #DFDFDF;
+            padding: 46px 26px 58px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 381px;
+            align-self: flex-end;
+
+            &-heading {
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+
+            p {
+                color: #4F4235;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+
+                &:last-child {
+                    //font-size: 11.675px !important;
+                }
+
+                a {
+                    text-decoration: underline !important;
+                    color: #4F4235;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: $font-weight-light;
+                    line-height: normal;
+                }
+            }
+        }
+
+    }
+
+    //Onay
+    .Confirmation {
+        display: grid;
+        grid-template-columns: 641fr 321fr;
+        height: 499px;
+
+        &_order-confirmation {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            > div {
+
+                &:first-child {
+                    border: 1px solid #DFDFDF;
+                    height: 118px;
+                    background: $color-white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    border-bottom: none;
+                    position: relative;
+                    top: 1px;
+                    width: 163px;
+
+                    span {
+                        color: #4F4235;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: $font-weight-medium;
+                        line-height: normal;
+                    }
+                }
+
+                &:last-child {
+                    border: 1px solid #DFDFDF;
+                    border-right: none;
+                    padding: 46px 42px 40px;
+                    height: 381px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    p {
+                        margin-bottom: 0;
+                        color: #4F4235;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: $font-weight-light;
+                        line-height: normal;
+                    }
+
+                    .order-number-heading {
+                        color: #4F4235;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: $font-weight-light;
+                        line-height: normal;
+                        letter-spacing: 4.48px;
+                    }
+
+                    .order-number {
+                        color: #4F4235;
+                        //font-family: Roboto;
+                        font-size: 30.636px;
+                        font-style: normal;
+                        font-weight: $font-weight-medium;
+                        line-height: normal;
+                    }
+                }
+
+            }
+        }
+
+        &_password-section {
+            border: 1px solid #DFDFDF;
+            height: 381px;
+            padding: 45px 40px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-self: flex-end;
+
+            p {
+                margin-bottom: 0;
+                color: #4F4235;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+            }
+
+            label {
+                color: #4F4235;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
+
+            input {
+                &[type="password"] {
+                    width: 100%;
+                    height: 56px;
+                    border: 1px solid #7A6958;
+                    background: #FFF;
+                }
+            }
+
+            span {
+                color: #4F4235;
+                font-size: 11.675px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+                text-decoration-line: underline;
+                margin-left: 10px;
+            }
+        }
+    }
+}

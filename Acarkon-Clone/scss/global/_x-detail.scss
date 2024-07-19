@@ -1,0 +1,205 @@
+.X-detail-collectors {
+    display: flex;
+    justify-content: center;
+
+    // img {
+    //     position: relative;
+    //     right: 84px;
+    //     top: 50px;
+    //     overflow: visible !important;
+    // }
+
+    
+
+    .slick-list {
+        padding: 0 !important;
+    }
+
+    
+
+    .collector {
+        color: #4F4235;
+        font-size: 36.818px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        // line-height: 0%; /* 0px */
+    }
+
+    .collector-sub {
+        color: #4F4235;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        // line-height: 0%;
+    }
+
+    .collector-sub-text {
+        color: #4F4235;
+        font-size: 16px; 
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: 157.7%; /* 25.232px */
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .collector-social {
+        color: #7A6958;
+        text-align: center;
+        font-size: 15.114px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: 120.7%; /* 18.243px */
+    }
+
+    .follow-collector {
+        width: 98px;
+        height: 28.747px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 19.6px;
+
+         
+        color: #FFF;
+        text-align: center;
+        font-size: 15.148px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: 120.7%; /* 18.283px */
+        margin-left: 28px;
+        
+        div {
+            &:first-child {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: linear-gradient(90deg, #D59744 0%, #E3AA5E 100%);
+                border-radius: 19.6px;
+                z-index: -1;
+                transition: opacity .5s;
+            }
+            &:last-child {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: linear-gradient(-90deg, #D59744 0%, #E3AA5E 100%);
+                border-radius: 19.6px;
+                z-index: -2;
+            }
+        }
+
+        &:hover {
+            div:first-child {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+#x-detail-counterhere {
+
+    .slick-dots {
+        list-style: none;
+        padding: 0;       
+        margin: 0;
+
+        button {
+            background: none;
+            border: none;
+            display: none;
+            padding: 0;
+
+            color: #4F4235;
+            font-size: 23.778px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        .slick-active {
+            button {
+                display: block;
+            }
+        }
+    }
+}
+
+#x-detail-navhere {
+
+    img {
+        cursor: pointer;
+        border-radius: 50%;
+        transition: transform .2s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+    }
+
+}
+
+
+.x-detail-choices {
+    img {
+        width: 100%;
+        //height: auto;
+    }
+
+    /*.Card-product-image {
+        height: auto;
+    }*/
+
+    .Card-product {
+        border: none;
+
+        #shipping {
+            color: #4F4235;
+
+        } 
+
+        #product-id {
+            color: #4F4235;
+        }
+
+        #price-wrapper {
+            
+            #price {
+                color: #4F4235 !important;
+
+            }
+
+            #square-meter {
+                color: #4F4235 !important;
+
+            }
+
+            #currency {
+                color: #4F4235 !important;
+
+            }
+        } 
+    }
+
+    #content-info {
+        color: #4F4235;
+        font-size: 25.781px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-left: 10px;
+
+        span {
+            color: rgba(79, 66, 53, 0.20);
+        }
+    }
+}

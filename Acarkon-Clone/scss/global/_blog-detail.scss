@@ -1,0 +1,176 @@
+@mixin blogDetailLinks($fontSize, $lineHeight) {
+    color: #4F4235;
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: 300;
+    line-height: $lineHeight;
+}
+
+
+.Blog-detail {
+    position: relative;
+    bottom: 370px;
+
+    #blog {
+        color: #4F4235;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+    }
+
+    &-heading {
+        color: #4F4235;
+        font-size: 35.548px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+        margin-top: 19px;
+    }
+
+    &-breadcrumb {
+        color: #4F4235;
+        text-align: center;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+        letter-spacing: 2.34px;
+        margin-top: 8px;
+    }
+
+    &-date {
+        color: #4F4235;
+        text-align: center;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: normal;
+        letter-spacing: 2.34px;
+        margin-top: 32px;
+    }
+
+    &-like-view {
+        color: #A23E20;
+        text-align: center;
+        font-size: 10.865px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+    }
+
+    .content-wrapper {
+        display: grid !important;
+        grid-template-columns: 939fr 335fr;
+        gap: 54px;
+        margin-top: 46px;
+    }
+
+    article {
+        color: #4F4235;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: 178.7%; /* 57.184px */
+
+        p {
+            white-space: pre-line;
+        }
+
+        span {
+            font-size: 32px;
+        }
+    }
+
+    
+
+    &-link-heading {
+        @include blogDetailLinks(22.079px, 178.7%);
+    }
+
+    a {
+        @include blogDetailLinks(16px, 151.2%);
+        gap: 21.45px;
+        padding-right: 35px;
+        margin-bottom: 18px;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    &-label {
+        @include blogDetailLinks(16px, auto);
+        border-radius: 300px;
+        border: 1px solid rgba(122, 105, 88, 0.20);
+        background: #FCF6EF;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 22px; 
+        
+    }
+
+    .blog-detail-slider {
+        width: 939px;
+
+    }
+
+    .Blog-card {
+        // margin-right: 10px;
+        margin-left: 20.44px !important;
+
+        
+    }
+
+    .slick-list {
+        padding-left: 20px !important;
+        // padding-right: 40px !important;
+    }
+
+    #blogdetail-navhere {
+        img {
+
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all .2s;
+
+            &:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+            &:active {
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            }
+        }
+    }
+
+    .slick-dots {
+        list-style: none;
+        margin-bottom: 0;
+
+        button {
+            display: none;
+            background: none;
+            border: none;
+            padding: 0;
+
+            color: #7A6958;
+            font-size: 23.778px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            line-height: normal;
+
+            
+        }
+
+        .slick-active {
+            button {
+                display: block;
+            }
+        }
+    }
+} 
+

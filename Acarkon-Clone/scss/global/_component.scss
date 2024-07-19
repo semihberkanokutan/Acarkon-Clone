@@ -1,0 +1,468 @@
+.Carousel-nav-buttons {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    transition: all .2s; 
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &:active {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        
+    }
+}
+
+.Owl-carousel-prev-next {
+    button {
+        background: none;
+        border: none;
+        transition: all .2s;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        border-radius: 50%;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            
+        }
+    }
+}
+
+.Component-menu {
+
+    border: 0.5px solid $color-coffee !important;
+    background: #FFF !important;
+    border-radius: 0 !important;
+    min-width: 16rem !important;
+
+    .link-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .menu-link {
+            // height: 36px;
+            border-left: 6px solid transparent;
+            padding-left: 26px;
+            // padding-top: 4px;
+            // padding-bottom: 4px;
+            margin-top: 10px;
+
+            color: rgba($color: $color-coffee, $alpha: .6);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            // line-height: 0%;
+
+            &:hover {
+                color: $color-coffee;
+                border-color: $color-coffee;
+            }
+        }
+    }
+
+    
+}
+
+.Start-shopping {
+    position: relative;
+    display: inline-flex;
+
+    font-size: 22.709px;
+    font-style: normal;
+    font-weight: $font-weight-medium;
+    line-height: 112.2%; /* 25.479px */
+
+    background: linear-gradient(90deg, #659999 0%, #F4791F 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+    svg {
+        transition: all .2s;
+    }
+
+    &-arrow-wrapper {
+        position: relative;
+        margin-left: 6px;
+
+        #Start-shopping-arrow {
+            position: absolute;
+        }
+
+        #Start-shopping-arrow-hover {
+            position: absolute;
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        #Start-shopping-arrow {
+            opacity: 0;
+        }
+
+        #Start-shopping-arrow-hover {
+            opacity: 1;
+        }
+    }
+
+}
+
+// <a href="#" class="Start-shopping">
+//     Alışverişe Başla
+//     <div class="Start-shopping-arrow-wrapper">
+//         <svg id="Start-shopping-arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+//             <path d="M12.9154 4.15149L23.0945 12.984C23.1866 13.0639 23.2605 13.1626 23.3111 13.2735C23.3617 13.3843 23.3879 13.5048 23.3879 13.6267C23.3879 13.7486 23.3617 13.8691 23.3111 13.9799C23.2605 14.0908 23.1866 14.1895 23.0945 14.2694L12.9154 23.0993C12.8847 23.1259 12.847 23.1432 12.8068 23.1491C12.7665 23.155 12.7255 23.1491 12.6885 23.1323C12.6514 23.1155 12.62 23.0884 12.598 23.0542C12.576 23.02 12.5642 22.9802 12.5641 22.9396L12.5641 20.784C12.5641 20.6616 12.6174 20.5445 12.7105 20.462L19.4247 14.6366L4.43947 14.6366C4.32238 14.6366 4.22658 14.5408 4.22658 14.4237L4.22658 12.827C4.22658 12.7099 4.32238 12.6141 4.43947 12.6141L19.4247 12.6141L12.7105 6.78874C12.6173 6.7089 12.5641 6.59181 12.5641 6.46673L12.5641 4.31116C12.5641 4.1302 12.777 4.03173 12.9154 4.15149Z" fill="#F17A22"/>
+//         </svg>
+//         <svg id="Start-shopping-arrow-hover" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+//             <rect x="1" y="1" width="26" height="26" rx="10" fill="#FFE9D9"/>
+//             <path d="M12.9154 4.15149L23.0945 12.984C23.1866 13.0639 23.2605 13.1626 23.3111 13.2735C23.3617 13.3843 23.3879 13.5048 23.3879 13.6267C23.3879 13.7486 23.3617 13.8691 23.3111 13.9799C23.2605 14.0908 23.1866 14.1895 23.0945 14.2694L12.9154 23.0993C12.8847 23.1259 12.847 23.1432 12.8068 23.1491C12.7665 23.155 12.7255 23.1491 12.6885 23.1323C12.6514 23.1155 12.62 23.0884 12.598 23.0542C12.576 23.02 12.5642 22.9802 12.5641 22.9396L12.5641 20.784C12.5641 20.6616 12.6174 20.5445 12.7105 20.462L19.4247 14.6366L4.43947 14.6366C4.32238 14.6366 4.22658 14.5408 4.22658 14.4237L4.22658 12.827C4.22658 12.7099 4.32238 12.6141 4.43947 12.6141L19.4247 12.6141L12.7105 6.78874C12.6173 6.7089 12.5641 6.59181 12.5641 6.46673L12.5641 4.31116C12.5641 4.1302 12.777 4.03173 12.9154 4.15149Z" fill="#F17A22"/>
+//         </svg>
+//     </div>
+// </a>
+
+.Easy-setup {
+    position: relative;
+    display: inline-flex;
+    transition: all 2s;
+    align-items: center;
+    gap: 10px;
+
+    .Easy-setup-icon {
+        transition: transform .6s;
+    } 
+
+    .Easy-setup-text {
+        transition: transform .6s;
+    }
+
+
+
+    &-text {
+        color: $color-coffee;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: 163.7%; /* 22.918px */
+        text-decoration-line: underline;
+        
+    }
+
+    &:hover {
+        .Easy-setup-icon {
+            transform: translateX(170px);
+        }
+
+        .Easy-setup-text {
+            transform: translateX(-30px);
+        }
+        
+    }
+}
+
+
+.Component-products {
+    &-nav-section {
+        margin-bottom: 30px;
+        
+    }
+
+    .owl-item.active.center {
+        border: 0.2px solid #000;
+    }
+
+    #Component-products-counter-here {
+        .owl-dot {
+            display: none;
+            color: $color-coffee;
+            font-size: 23.778px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        .active {
+            display: block;
+        }
+    }
+
+    #Component-products-navhere {
+        // button {
+        //     width: 40px;
+        //     height: 40px;
+        //     border-radius: 50%;
+        //     background: none;
+        //     border: 2.4px solid $color-coffee;
+
+        //     &:hover {
+        //         background-color: $color-coffee;
+
+        //         i {
+        //             color: $color-white !important;
+        //             font-weight: bolder;
+        //         }
+        //     }
+
+        //     &:active {
+        //         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                
+        //     }
+        // }
+
+        // .owl-prev {
+        //     margin-right: 7px;
+        // }
+    }
+}
+
+.Card-product {
+    position: relative;
+    padding: 20px;
+    //height: 382px;
+    min-height: 382px;
+    max-height: 440px;
+    height: 100%;
+    //max-height: 382px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 0.5px solid #DFDFDF;
+    // border-left: 0.5px solid #DFDFDF;
+
+
+
+    &-shipping {
+
+        #shipping {
+            color: #7A6958;
+            text-align: center;
+            font-size: 12.237px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 0%; /* 0px */
+        }
+    }
+
+    &-image {
+        height: 70%;
+        display: flex;
+        justify-content: center;
+
+        @include mq("tv", min) {
+            //height: 440px;
+        }
+
+        img {
+            height: 100%;
+            width: auto !important;
+        }
+    }
+
+    &-content {
+        #product-id {
+            color: $color-coffee;
+            font-size: 11.559px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+
+        #price-wrapper {
+            display: flex;
+            gap: 2px;
+            #price {
+                color: $color-coffee;
+                font-size: 27.975px;
+                font-style: normal;
+                font-weight: $font-weight-bold;
+                line-height: normal;
+            }
+
+            #square-meter {
+                color: $color-coffee;
+                font-size: 13.987px;
+                font-style: normal;
+                font-weight: $font-weight-bold;
+                line-height: normal;
+
+                position: relative;
+                top: 4px;
+              
+            }
+
+            #currency {
+                color: $color-coffee;
+                font-size: 9.991px;
+                font-style: normal;
+                font-weight: $font-weight-bold;
+                line-height: normal;
+                
+                position: relative;
+                bottom: 1px;
+                left: 3px;
+            }
+        }
+    }
+
+    .badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        position: absolute;
+        right: 10px;
+        top: 36px;
+
+        &-name {
+            color: #898989;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            line-height: normal;
+        }
+    }
+}
+
+.Component-become-a-master-button {
+    position: relative;
+    display: flex;
+    width: 219px;
+    height: 48px;
+    padding: 11px 15px 11px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    // flex-shrink: 0;
+    transition: all 1s;
+    -moz-transition: all 1s linear;
+    //background: linear-gradient(90deg, #FFFAF4 0%, #ECE1D7 100%);
+
+    color: $color-black;
+    font-size: 15.767px;
+    font-style: normal;
+    font-weight: $font-weight-medium;
+    line-height: 106.2%; /* 16.745px */
+
+    &:hover {
+        //background-color: #FFFAF4;
+        //background: linear-gradient(90deg, #EDE2D9 0%, #FFFAF4 100%);
+        div {
+            &:nth-child(1) {
+                opacity: 0;
+            }
+            &:nth-child(2) {
+                opacity: 1;
+            }
+        }
+    }
+
+    div {
+        transition: all .4s;
+        &:nth-child(1) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #FFFAF4 0%, #ECE1D7 100%);
+        }
+
+        &:nth-child(2) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-90deg, #FFFAF4 0%, #ECE1D7 100%);
+            opacity: 0;
+        }
+    }
+}
+
+.Component-view-products-button {
+    display: flex;
+    width: 148px;
+    height: 42.036px;
+    padding: 9.633px 13.136px 9.633px 12.26px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.882px;
+    transition: all .3s;
+
+    border: 0.876px solid #FFF;
+    background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(2px);
+
+    .text-view-products {
+        color: $color-white;
+        font-size: 13.808px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: 106.2%; /* 14.664px */
+    }
+
+    &:hover {
+        background: none;
+    }
+}
+
+.How-to-assemble-button {
+
+
+    &:hover {
+        +  .How-to-assemble-button-hover-text {
+            opacity: 1;
+        }
+    }
+
+    &-hover-text {
+        color: $color-white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+        margin-bottom: 0;
+        opacity: 0;
+        transition: opacity .4s;
+
+    }
+
+   
+}
+
+.Component-calculate-measure {
+
+    + .calculate-measure {
+        display: grid;
+        place-items: center;
+
+        width: 78px;
+        height: 26px;
+
+        border-radius: 13px;
+        background: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(2.1666667461395264px);
+
+        color: $color-white;
+        font-size: 10.706px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+
+        opacity: 0;
+        transition: opacity .4s;
+    }
+
+    &:hover {
+        + .calculate-measure {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,518 @@
+%form-buttons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19.604px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    padding: 22px;
+
+    color: $color-white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: $font-weight-medium;
+    line-height: 228.7%; /* 45.74px */
+}
+
+.Login-register-wrapper {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 125px;
+    width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    button {
+        &:hover {
+            opacity: .9;
+            transition: opacity .2s;
+        }
+    }
+
+    .input {
+        width: 100%;
+        height: 56px;
+        outline: none;
+        border: 1px solid #4F4235;
+        background: $color-white;
+        padding: 0;
+        padding-left: 20px;
+        color: $color-coffee;
+    }
+
+    .label {
+        color: #4F4235;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .Login {
+        width: 100%;
+
+        .forgot-password {
+            color: #4F4235;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            line-height: normal;
+            text-decoration-line: underline !important;
+        }
+
+        .login-button {
+            @extend %form-buttons;
+            background: #4F4235; 
+        }
+
+        .login-with-google {
+            @extend %form-buttons;
+            background:linear-gradient(90deg, #D31027 0%, #EA384D 100%);
+        }
+    }
+
+    .register-free {
+        border: 0.744px solid rgba(79, 66, 53, 0.20);
+        background: $color-white;
+        height: 446px;
+        padding-top: 61px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 28px;
+
+        &-heading {
+            color: #4F4235;
+            text-align: center;
+            font-size: 26.526px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 107.2%; /* 28.436px */
+        }
+ 
+        &-sub-heading {
+            color: #4F4235;
+            text-align: center;
+            font-size: 18.365px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            // line-height: 0%; /* 0px */
+            position: relative;
+            bottom: 20px;
+        }
+        
+
+        &-image {
+            width: 178px;
+            height: 233px;
+        }
+    }
+
+    .Register {
+        width: 100%;
+
+        .continue-button {
+            @extend %form-buttons;
+            background: #4F4235;
+            margin-top: 41px;
+        }
+
+        label[for="female"],
+        label[for="male"] {
+            color: #4F4235;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: normal;
+        }
+
+        .radio-label {
+            position: relative;
+            width: 20px;
+            height: 20px;
+
+            img {
+                position: absolute;
+                top: 0;
+                z-index: -1;
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+
+                &:hover {
+                    + img {
+                        opacity: .7;
+                    }
+                }
+
+                &:active {
+                    + img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .register-check-wrapper {
+            position: relative;
+            width: 20px;
+            height: 20px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                border-radius: 6px;
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+
+                &:hover {
+                    + img {
+                        opacity: .7;
+                    }
+                }
+
+                &:active {
+                    + img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .Approvals {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 28px;
+
+        &-content {
+            color: #4F4235;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            line-height: normal;
+            margin-bottom: 0;
+
+            span, a {
+                color: #4F4235;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: $font-weight-medium;
+                line-height: normal;
+                text-decoration-line: underline !important;
+            }
+        }
+    }
+}
+/*
+input[type="checkbox"] {
+    display: block;
+    background: url('../../public/img/checkbox/unchecked.svg');
+    background-repeat: no-repeat;
+	background-position: bottom;
+}*/
+
+
+// My Account
+.Order-tracking {
+    background: #FFEBDF;
+    height: 120px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-right: 46px;
+    padding-left: 64px;
+    gap: 54px;
+    width: 100%;
+
+    .inquire-button {
+        background: #4F4235;
+        color: $color-white;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: 228.7%; /* 45.74px */
+        border: none;
+        height: 56px;
+        width: 205px;
+        //padding-left: 47px;
+        //padding-right: 47px;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    .order-tracking-heading {
+        color: #4F4235;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+    }
+
+    .order-tracking-input {
+        background: $color-white;
+        border: none;
+        padding-left: 35px;
+    }
+}
+
+.My-account {
+
+    &-heading {
+        color: #4F4235;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+        margin-bottom: 0;
+    }
+
+    .account-holder {
+        color: #4F4235;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: normal;
+        margin-bottom: 5px;
+    }
+
+    .company {
+        color: #4F4235;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: normal;
+    }
+
+}
+
+@mixin myAccountCardText() {
+    color: #4F4235;
+    font-size: 14.935px;
+    font-style: normal;
+    font-weight: $font-weight-light;
+    line-height: normal;
+}
+
+@mixin myAccountCardFooterContent($fontSize, $fontWeight) {
+    color: #4F4235;
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: $fontWeight;
+    line-height: 138.7%; /* 19.333px */
+}
+
+.My-account-main {
+    margin-top: 40px;
+    .My-account-card {
+        padding: 23px 34px 21px 38px;
+        position: relative;
+
+        border: 0.996px solid #DFDFDF;
+        background: #FFF;
+        height: 346px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-heading {
+            color: #4F4235;
+            font-size: 15.93px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: normal;
+        }
+
+        &-body-content {
+            @include myAccountCardText();
+
+            a {
+                @include myAccountCardText();
+                text-decoration: underline !important;
+            }
+
+            position: relative;
+            bottom: 30px;
+        }
+
+        &-divider {
+            background: rgba(122, 105, 88, 0.20);
+            height: 0.996px;
+            border: none;
+            opacity: 1;
+            position: absolute;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 75px;
+        }
+
+        .address {
+            color: #4F4235;
+            font-size: 13.939px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 138.7%; /* 19.333px */
+            position: relative;
+            bottom: 40px;
+        }
+
+        address {
+            color: #4F4235;
+            text-align: right;
+            //font-family: Roboto;
+            font-size: 18.702px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 138.7%; /* 25.94px */
+            margin-bottom: 0;
+        }
+
+
+        #address-book-footer {
+            @include myAccountCardFooterContent(13.939px, $font-weight-light);
+            a {
+                @include myAccountCardFooterContent(13.939px, $font-weight-light);
+                text-decoration: underline !important;
+            }
+        }
+
+        #discount-coupons-footer {
+            *:first-child {
+                @include myAccountCardFooterContent(13.939px, $font-weight-light);
+            }
+            *:last-child {
+                @include myAccountCardFooterContent(39.656px, 400);
+
+                span {
+                    font-size: 23.896px !important;
+                }
+            }
+        }
+    }
+
+    .My-account-faq-card {
+        margin-top: 22px;
+        height: 414px;
+        border: 0.996px solid #DFDFDF;
+        background: $color-white;
+        padding: 53px 39px;
+        display: flex;
+        flex-direction: column;
+
+
+        h2 {
+            color: #4F4235;
+            font-size: 21.503px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: normal;
+        }
+
+        p {
+            color: #4F4235;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: $font-weight-light;
+            line-height: normal;
+            margin-top: 10px;
+            margin-bottom: 40px;
+
+            a {
+                color: #4F4235;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: $font-weight-light;
+                line-height: normal;
+                text-decoration: underline !important;
+            }
+        }
+
+        &-question {
+            color: #4F4235;
+            font-size: 15.727px;
+            font-style: normal;
+            font-weight: $font-weight-medium;
+            line-height: 195.2%; /* 30.699px */
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+}
+
+@mixin myAccountAside($fontSize, $lineHeight) {
+    color: #4F4235;
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: 300;
+    line-height: $lineHeight;
+}
+
+.My-account-aside {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+        @include myAccountAside(13.985px, normal);
+    }
+
+    &-main-link {
+        @include myAccountAside(13.985px, normal);
+        margin-bottom: 18px;
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    &-sub-link {
+        @include myAccountAside(13.053px, 26.571px);
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 16px;
+    }
+
+    &-logout {
+        @include myAccountAside(13.985px, normal);
+        background: none;
+        border: none;
+        padding: 0;
+        display: inline-flex !important;
+        &:hover {
+            opacity: .9;
+        }
+    }
+}
+
+
+

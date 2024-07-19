@@ -1,0 +1,92 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+@mixin mq($width: "tablet", $direction: max){
+
+    @if ($direction == max) {
+        // Small devices (landscape phones, 576px and up)
+        @if ($width == "phone") {
+            @media (max-width: 576px) {  
+                @content;
+            }
+        }
+        // Medium devices (tablets, 768px and up)
+        @else if ($width == "tablet") {
+            @media (max-width: 768px) {  
+                @content;
+            }
+        }
+        // Large devices (desktops, 992px and up)
+        @else if ($width == "desktop") {
+            @media (max-width: 992px) { 
+                @content;
+            }
+        }
+        // X-Large devices (large desktops, 1200px and up)
+        @else if ($width == "large") {
+            @media (max-width: 1200px) { 
+                @content;
+            }
+        }
+        // XX-Large devices (larger desktops, 1400px and up)
+        @else if ($width == "larger") {
+            @media (max-width: 1400px) { 
+                @content;
+            }
+        }
+        @else if ($width == "tv") {
+            @media (max-width: 1900px) { 
+                @content;
+            }
+        }
+    } @else {
+        // Small devices (landscape phones, 576px and up)
+        @if ($width == "phone") {
+            @media (min-width: 576px) {  
+                @content;
+            }
+        }
+        // Medium devices (tablets, 768px and up)
+        @else if ($width == "tablet") {
+            @media (min-width: 768px) {  
+                @content;
+            }
+        }
+        // Large devices (desktops, 992px and up)
+        @else if ($width == "desktop") {
+            @media (min-width: 992px) { 
+                @content;
+            }
+        }
+        // X-Large devices (large desktops, 1200px and up)
+        @else if ($width == "large") {
+            @media (min-width: 1200px) { 
+                @content;
+            }
+        }
+        // XX-Large devices (larger desktops, 1400px and up)
+        @else if ($width == "larger") {
+            @media (min-width: 1400px) { 
+                @content;
+            }
+        }
+        @else if ($width == "tv") {
+            @media (min-width: 1900px) { 
+                @content;
+            }
+        }
+    }
+
+    
+
+    
+}
+
+
+
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) {  }
